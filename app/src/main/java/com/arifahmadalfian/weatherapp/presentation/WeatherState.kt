@@ -2,8 +2,8 @@ package com.arifahmadalfian.weatherapp.presentation
 
 import com.arifahmadalfian.weatherapp.domain.weather.WeatherInfo
 
-data class WeatherState (
+data class WeatherState<T> (
     val isLoading: Boolean = false,
-    val weather: WeatherInfo? = null,
+    val weather: T? = null,
     val error: String? = null
 )

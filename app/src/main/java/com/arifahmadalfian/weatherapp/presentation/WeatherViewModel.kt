@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.arifahmadalfian.weatherapp.domain.location.ILocationTracker
 import com.arifahmadalfian.weatherapp.domain.repository.IWeatherRepository
 import com.arifahmadalfian.weatherapp.domain.util.Resource
+import com.arifahmadalfian.weatherapp.domain.weather.WeatherInfo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -18,7 +19,7 @@ class WeatherViewModel @Inject constructor(
     private val locationTracker: ILocationTracker
 ) : ViewModel() {
 
-    var state by mutableStateOf(WeatherState())
+    var state by mutableStateOf(WeatherState<WeatherInfo>())
         private set
 
     fun loadWeatherInfo() {

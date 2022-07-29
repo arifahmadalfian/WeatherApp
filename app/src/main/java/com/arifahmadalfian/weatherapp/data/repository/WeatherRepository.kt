@@ -5,8 +5,9 @@ import com.arifahmadalfian.weatherapp.data.remote.IWeatherApi
 import com.arifahmadalfian.weatherapp.domain.repository.IWeatherRepository
 import com.arifahmadalfian.weatherapp.domain.util.Resource
 import com.arifahmadalfian.weatherapp.domain.weather.WeatherInfo
+import javax.inject.Inject
 
-class WeatherRepository(
+class WeatherRepository @Inject constructor(
     private val api: IWeatherApi
 ): IWeatherRepository {
 
